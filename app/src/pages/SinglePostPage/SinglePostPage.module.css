@@ -1,6 +1,13 @@
+/* General Post Container */
 .post {
   margin-top: 6rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/* Text Ellipsis for Long Content */
 .post__ellipsis {
   overflow: hidden;
   display: -webkit-box;
@@ -8,53 +15,110 @@
   max-height: 150px;
   -webkit-box-orient: vertical;
 }
+
+/* Date and Time Styling */
 .post__date {
   display: flex;
   gap: 6px;
   align-items: center;
   font-size: 1.5rem;
   margin-bottom: 2rem;
+  color: #777;
 }
 
+.post__date svg {
+  color: #777;
+}
+
+/* Category Text Styling */
 .post__category {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   font-weight: 400;
+  color: #444;
 }
 
+/* Title Styling */
 .post__title {
   margin-bottom: 0.5rem;
-  line-height: initial;
-  overflow: hidden;
   font-size: 4rem;
   font-weight: bold;
+  line-height: 1.2;
   margin-top: 3rem;
+  color: #222;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: break-word;
 }
 
+/* Subtitle Styling */
 .post__subtitle {
   margin-bottom: 0.5rem;
-  line-height: initial;
-  overflow: hidden;
-  font-size: 4rem;
-  font-weight: bold;
-  margin-top: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
 }
 
+/* Title Link Styling */
 .post__title--link {
   color: #699ea0;
   cursor: pointer;
   text-decoration: underline;
 }
 
-.post__title:hover {
-  outline: 0;
+.post__title--link:hover {
+  color: #4f6f75;
 }
 
+/* Title Hover State */
+.post__title:hover {
+  outline: none;
+  text-decoration: underline;
+  color: #222;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Author Name Styling */
 .post__author {
   font-weight: 600;
+  color: #555;
 }
 
+/* Description Styling */
 .post__description {
   font-size: 2rem;
-  line-height: 1.5;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .post {
+    padding: 1rem;
+    margin-top: 3rem;
+  }
+
+  .post__title {
+    font-size: 2.5rem;
+  }
+
+  .post__category {
+    font-size: 2rem;
+  }
+
+  .post__date {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .post__description {
+    font-size: 1.8rem;
+  }
+
+  .post__author {
+    font-size: 1.6rem;
+  }
 }
