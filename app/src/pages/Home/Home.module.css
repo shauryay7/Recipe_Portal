@@ -1,5 +1,5 @@
 .home {
-  margin-top: 6rem;
+  margin-top: 3rem;
   background-image: url(../../assets/food.webp);
   background-size: cover;
   height: 100vh;
@@ -8,6 +8,7 @@
   justify-content: center;
   color: white;
   text-align: center;
+
 }
 
 .home__container {
@@ -16,21 +17,39 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+  border-radius: 20px;
+
 }
 
 .home__text {
   max-width: 28rem;
   padding: 3rem;
-  border-radius: 4px;
+  border-radius: 20px;
   background-color: white;
   color: black;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0.95;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* optional for depth */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* subtle border for glass look */
+
 }
 
 .home__description {
   margin-top: 0.5rem;
   text-align: center;
+
 }
 
 .home__button {
   color: black;
+  background: rgba(255, 255, 255, 0.2);
+  opacity: 0.95;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); /* for Safari support */
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* optional for depth */
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }

@@ -2,13 +2,14 @@ import React from "react";
 import AppBar from "@mui/material/AppBar";
 import Typography from "@mui/material/Typography";
 import { Link } from "react-router-dom";
+import "./Navbar.css"
 
 const navItems = ["Recipes", "Categories"];
 
 const Navbar = () => {
   return (
     <AppBar component="nav" color="inherit">
-      <div className="flex" style={{ padding: "2rem" }}>
+      <div className="flex navcol" style={{ padding: "2rem" }}>
         <Link to="/">
           <Typography
             variant="h6"

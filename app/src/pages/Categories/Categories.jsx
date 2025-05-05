@@ -10,6 +10,7 @@ import { useEffect } from "react";
 import useFetch from "../../hooks/useFetch";
 import Loading from "../../components/Loading/Loading";
 import Time from "../../components/Time/Time";
+import "./Categories.css";
 
 const Categories = () => {
   const [createModalOpen, setCreateModalOpen] = useState(false);

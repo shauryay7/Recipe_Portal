@@ -9,37 +9,30 @@ import { apiDomain } from "../../utils/utils";
 import Loading from "../../components/Loading/Loading";
 import Time from "../../components/Time/Time";
 
-const SinglePostPage = () => {
+const SinglePostPage = (props) => {
     const { recipeId } = useParams();
 
-    // Fetching data for the recipe
-    const { loading, error, value } = useFetch(`${apiDomain()}/api/recipes/${recipeId}`);
+    const { loading, error, value } = useFetch(
+        `${apiDomain()}/api/recipes/${recipeId}`
+    );
 
-    // Return loading component while fetching
     if (loading) {
         return <Loading />;
     }
 
-    // Handle error if any
-    if (error) {
-        return <div className={styles.error}>Error loading the recipe. Please try again later.</div>;
-    }
-
-    // Destructure the value object for easier usage
-    const { recipeTitle, recipeCategory, createdAt, recipeAuthor, recipeContent } = value || {};
-
     return (
-        <article className={styles.post}>
-            <h2 className={styles.post__title}>{recipeTitle}</h2>
+        <article styleName="post">
+            <h2 styleName={`post__title`}>{value?.recipeTitle}</h2>
             <hr />
-            <p className={styles.post__category}>Category: {recipeCategory}</p>
-            <p className={styles.post__date}>
+            <p styleName="post__category">Category: {value?.recipeCategory}</p>
+            <p styleName="post__date">
                 <BsCalendar3 />
-                <Time dateString={createdAt} />
-                by <span className={styles.post__author}>{recipeAuthor}</span>
+                <Time dateString={value?.createdAt} />
+                by
+                <span styleName="post__author">{value?.recipeAuthor}</span>
             </p>
-            <section className={styles.post__description}>
-                {parse(recipeContent)}
+            <section styleName={`post__description`}>
+                {parse(value?.recipeContent)}
             </section>
         </article>
     );

@@ -1,0 +1,12 @@
+.navcol {
+    background: rgba(255, 255, 255, 0.2); /* semi-transparent white */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* for Safari support */
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* Optional enhancements */
+    padding: 1rem;
+    border-radius: 12px;
+}

@@ -5,6 +5,10 @@
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Text Ellipsis for Long Content */
@@ -22,8 +26,9 @@
   gap: 6px;
   align-items: center;
   font-size: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   color: #777;
+  font-weight: 500;
 }
 
 .post__date svg {
@@ -33,35 +38,28 @@
 /* Category Text Styling */
 .post__category {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
   font-weight: 400;
   color: #444;
+  text-transform: capitalize;
 }
 
 /* Title Styling */
 .post__title {
   margin-bottom: 0.5rem;
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
   line-height: 1.2;
-  margin-top: 3rem;
+  margin-top: 2rem;
   color: #222;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   word-wrap: break-word;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Subtitle Styling */
-.post__subtitle {
-  margin-bottom: 0.5rem;
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #333;
-}
-
-/* Title Link Styling */
 .post__title--link {
   color: #699ea0;
   cursor: pointer;
@@ -76,14 +74,23 @@
 .post__title:hover {
   outline: none;
   text-decoration: underline;
-  color: #222;
-  transition: color 0.3s ease-in-out;
+  color: #007BFF;
+}
+
+/* Subtitle Styling */
+.post__subtitle {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  font-style: italic;
 }
 
 /* Author Name Styling */
 .post__author {
   font-weight: 600;
   color: #555;
+  text-transform: capitalize;
 }
 
 /* Description Styling */
